@@ -22,14 +22,15 @@ class SnackCreateView(CreateView):
     template_name="snack_create.html"
     model=Snack
     fields="__all__"
-# class SnackUpdateView(UpdateView):
-#     template_name='thing_update.html'
-#     model=Snack
-#     fields="__all__"
-#     success_url=reverse_lazy('')
+class SnackUpdateView(UpdateView):
+    template_name='snack_update.html'
+    model=Snack
+    fields="__all__"
+    success_url=reverse_lazy('home')
 
 
-# class SnackDeleteView(DeleteView):
-#     template_name="D"
-#     model=Snack
-#     success_url=reverse_lazy('')
+class SnackDeleteView(DeleteView):
+    template_name='snack_delete.html'
+    model=Snack
+    fields="__all__"
+    success_url=reverse_lazy('home')
